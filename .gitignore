@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+validation/results.json
+.agent/runs/
+.env
+.env.*
+!.env.example
