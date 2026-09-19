@@ -43,6 +43,7 @@
 ## 5. 工具
 
 使用 [工具规则](docs/agent/tooling.md)。运行前核实工作目录、预期副作用、超时和网络范围。
+Cursor、Pi Coding Agent、Hermes Agent、Codex 的加载差异与接力记录见 [客户端接入](docs/agent/clients.md)。
 只清理由当前任务创建且已确认归属的临时文件和进程，不关闭其他会话或服务。
 
 ## 6. 架构决策

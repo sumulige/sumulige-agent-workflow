@@ -17,17 +17,20 @@
 
 ## 2. 工具加载：官方资料核对于 2026-09-19
 
+目标组合是 **Cursor、Pi Coding Agent、Hermes Agent、Codex**；详细入口、覆盖风险和验收见
+[四客户端接入](clients.md)。本机版本、全局配置、扩展和运行后端尚未核实。
+
 | 工具 | 接入方式与边界 |
 |---|---|
-| Codex | 原生加载 AGENTS.md；遵守其目录发现与覆盖顺序，不宣称根文件能覆盖平台指令 |
-| Claude Code | 本包 CLAUDE.md 用 @AGENTS.md 导入；权限和 Bash 沙箱另行配置 |
-| Cursor | 使用根目录 AGENTS.md；仅需要分路径等能力时再加 .cursor/rules/*.mdc |
-| GitHub Copilot | 支持 Agent 指令文件，但需按实际 cloud agent/IDE 功能核对支持范围，不保证所有功能相同 |
+| Cursor | 根 AGENTS.md 为共享入口；IDE、CLI、云端与局部规则分别核实 |
+| Pi Coding Agent | 原生读取 AGENTS.md；检查父目录/全局上下文及 AGENTS.override.md，不把项目信任当成命令审批 |
+| Hermes Agent | 原生支持 AGENTS.md；检查 .hermes.md/HERMES.md 等优先入口及扫描/截断；个人记忆不授予项目权限 |
+| Codex | 原生加载 AGENTS.md；核实目录链/覆盖文件，沙箱和审批独立配置 |
 
-不复制多份规则正文，不自动覆盖用户原有适配文件。初始化后在真实工具中验证实际加载的规则。
-Codex 的 --sandbox 与 --ask-for-approval 分管隔离和审批；用已安装版本 --help 确认支持值。
-不推荐禁用权限检查的参数。Cursor 忽略文档特别提示终端与 MCP 的访问边界，需逐路径验证。
-本次提供接入说明与 Claude 导入文件，不声称已经运行所有厂商客户端或验证宿主安全。
+不复制四份正文，不创建替换系统提示或关闭上下文发现的适配文件。
+保留 CLAUDE.md 的 @AGENTS.md 导入供 Claude Code 兼容；Copilot 等未列为本次目标，不声称已经验收。
+不自动更改用户的 .cursor/、.pi/、.hermes/、.codex/ 或全局模型设置。
+只读提示、工具白名单、执行沙箱的保证层级不同，真实边界须以已安装版本的行为证据核实。
 
 ## 3. CI 与独立审查
 
@@ -49,3 +52,9 @@ Codex 的 --sandbox 与 --ask-for-approval 分管隔离和审批；用已安装�
 - [Copilot repository instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)
 - [GitHub Actions secure use](https://docs.github.com/en/actions/reference/security/secure-use)
 - [GitHub pull_request_target risks](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target)
+
+- [Pi Coding Agent README](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/README.md)
+- [Pi context loader](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts)
+- [Hermes context files](https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files)
+- [Hermes security](https://hermes-agent.nousresearch.com/docs/user-guide/security)
+- [Cursor CLI permissions](https://cursor.com/docs/cli/reference/permissions)

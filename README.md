@@ -7,6 +7,13 @@
 
 [v2.2 变更说明](CHANGELOG.md) · [核心规则](AGENTS.md) · [项目配置](docs/agent/project.md)
 
+## 目标客户端
+
+**Cursor、Pi Coding Agent、Hermes Agent、Codex** 共用根目录 AGENTS.md；
+[四客户端接入指南](docs/agent/clients.md) 列出启动目录、覆盖文件、权限边界和接力记录。
+不需要四份规则，不自动安装客户端或修改个人设置；原有 CLAUDE.md 仅保留兼容。
+客户端版本、实际规则加载和权限仍须在用户环境单独验收，不能由本仓库 CI 代替。
+
 ## 安全安装到已有项目
 
 在本规则包目录运行，Python 3.10+；目标目录须已存在。默认只预览：
@@ -45,7 +52,7 @@ ready 只做静态就绪检查，不执行命令、不证明测试通过。缺�
 “只读点评”不生成规格或记忆；“修复这个 Bug”先确认复现和验收；明确批准的范围内继续工作。
 [工作流程](docs/agent/workflow.md) 说明任务分级，[验证规则](docs/agent/testing.md) 区分任务完成与测试五态。
 默认不自动提交；明确要求提交 GitHub 时使用任务分支与 PR，不自动合并、部署或修改仓库保护。
-Claude Code 已通过 CLAUDE.md 导入 AGENTS.md；其他工具和执行隔离见 [工具接入](docs/agent/tooling.md)。
+四种目标客户端的工作流与执行隔离见 [工具接入](docs/agent/tooling.md)。
 
 ## 维护本规则包
 
@@ -61,14 +68,14 @@ python3 -B validation/check_bundle.py --json
 
 CI 对 Python 3.10/3.13 运行结构与回归测试，使用只读权限和固定 SHA，不注入秘密、不设置仓库保护。
 管理员应在看到真实检查运行后配置必需检查和独立评审；不能把“已添加工作流”说成“保护已开启”。
-[20 条真实 Agent 场景](docs/agent/scenarios.md) 是待执行清单，不是已经通过的行为测试。
+[20 条通用 + 8 条客户端场景](docs/agent/scenarios.md) 是待执行清单，不是已经通过的行为测试。
 
 ## 目录
 
 | 路径 | 职责 |
 |---|---|
 | AGENTS.md / CLAUDE.md | 共享核心规则 / Claude 导入 |
-| docs/agent/ | 唯一 JSON 配置、流程、验证、工具来源与行为场景 |
+| docs/agent/ | 唯一 JSON 配置、流程、验证、四客户端接入、工具来源与行为场景 |
 | docs/specs/_TEMPLATE/ / docs/adr/ | 需求、设计、任务与 ADR 模板 |
 | .agent/memory.example.md | 经验证经验与交接格式，不自动写共享记忆 |
 | validation/check_bundle.py | 只读静态检查器，不执行项目命令 |
