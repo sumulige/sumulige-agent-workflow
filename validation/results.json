@@ -1,0 +1,217 @@
+{
+  "total": 42,
+  "fail": 0,
+  "warning": 0,
+  "checks": [
+    {
+      "check": "exists:README.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:AGENTS.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:docs/agent/project.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:docs/agent/workflow.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:docs/agent/testing.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:docs/agent/tooling.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:docs/specs/_TEMPLATE/requirements.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:docs/specs/_TEMPLATE/design.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:docs/specs/_TEMPLATE/tasks.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:docs/adr/0000-template.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:.agent/memory.example.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "exists:validation/check_bundle.py",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "project.status_present",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "project.status_valid",
+      "result": "pass",
+      "detail": "unconfigured"
+    },
+    {
+      "check": "project.field:test_command",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "project.field:lint_command",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "project.field:protected_paths",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "project.field:timeout_seconds",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-1",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-2",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-3",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-4",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-5",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-6",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-7",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-8",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-9",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.state_gate",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.state:GREEN",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.state:RED",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.state:UNTESTED",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.state:TIMEOUT",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.state:UNKNOWN",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:GREEN",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:RED",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:UNTESTED",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:TIMEOUT",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:UNKNOWN",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "vague_words:AGENTS.md",
+      "result": "pass",
+      "detail": "count=0"
+    },
+    {
+      "check": "vague_words:docs/agent/workflow.md",
+      "result": "pass",
+      "detail": "count=0"
+    },
+    {
+      "check": "vague_words:docs/agent/testing.md",
+      "result": "pass",
+      "detail": "count=0"
+    },
+    {
+      "check": "vague_words:docs/agent/tooling.md",
+      "result": "pass",
+      "detail": "count=0"
+    }
+  ]
+}
