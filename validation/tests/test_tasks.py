@@ -17,7 +17,7 @@ class TaskTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         result = self.cli("create", "task-1", "--title", "Test task", "--objective", "Observed behavior",
                           "--scope", "src", "--authorization", "Explicit user request",
-                          "--acceptance", "Behavior verified", "--apply")
+                          "--acceptance", "Behavior verified", "--kind", "maintenance", "--apply")
         self.assertEqual(result.returncode, 0, result.stderr)
         self.path = self.root / "docs/changes/task-1/task.json"
 
@@ -32,17 +32,22 @@ class TaskTests(unittest.TestCase):
         self.path.write_text(json.dumps(record))
 
     def complete_fixture(self):
+        result = self.cli("run", "task-1", "--candidate", "synthetic-candidate", "--layer", "static",
+                          "--apply", "--", sys.executable, "-c", "print('synthetic observation')")
+        self.assertEqual(result.returncode, 0, result.stderr)
         log = self.root / "observed.log"
         log.write_text("Synthetic static observation for checker testing.\n")
         record = self.record()
         record.update(candidate="synthetic-candidate", status="COMPLETE", next="")
+        stamp = record["evidence"][0]["contract"]
         record["evidence"] = [{"id": "observed", "candidate": "synthetic-candidate", "layer": "static",
+                               "contract": stamp, "check_id": "", "outcome": "observed",
                                "status": "VERIFIED", "command": ["manual synthetic observation"], "cwd": ".",
                                "exit_code": None, "count": None, "artifact": "observed.log",
                                "sha256": hashlib.sha256(log.read_bytes()).hexdigest()}]
         record["acceptance"][0].update(status="VERIFIED", evidence=["observed"])
         record["review"].update(status="VERIFIED", reviewer="separate-human", reference="Synthetic review receipt",
-                               candidate="synthetic-candidate")
+                               candidate="synthetic-candidate", contract=stamp)
         self.save(record)
         return record
 
@@ -50,7 +55,7 @@ class TaskTests(unittest.TestCase):
         record = self.complete_fixture()
         result = self.cli("check")
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(record["release"]["status"], "UNRELEASED")
+        self.assertEqual(record["releases"], [])
         self.assertEqual(record["test_status"], "UNTESTED")
 
     def test_same_implementer_cannot_supply_independent_review(self):
@@ -75,6 +80,33 @@ class TaskTests(unittest.TestCase):
         record["test_status"] = "GREEN"
         self.save(record)
         self.assertEqual(self.cli("check").returncode, 1)
+
+    def test_unknown_summary_cannot_hide_current_failed_tests(self):
+        record = self.complete_fixture()
+        failed = dict(record["evidence"][0], id="failed", layer="unit",
+                      command=["synthetic failing suite"], outcome="exited", status="FAILED", exit_code=1, count=1)
+        record["evidence"].append(failed)
+        record["test_status"] = "UNKNOWN"
+        self.save(record)
+        result = self.cli("check")
+        self.assertEqual(result.returncode, 1, result.stdout)
+
+    def test_legacy_v1_unknown_cannot_hide_a_failed_test_at_completion(self):
+        record = self.complete_fixture()
+        record["schema_version"] = 1
+        record.pop("contract")
+        record.pop("releases")
+        record["release"] = {"status": "UNRELEASED", "reference": ""}
+        record["review"].pop("contract")
+        for key in ("contract", "check_id", "outcome"):
+            record["evidence"][0].pop(key)
+        record["evidence"].append(dict(record["evidence"][0], id="failed", layer="unit",
+                                       command=["failing suite"], status="FAILED", exit_code=1, count=1))
+        record["test_status"] = "UNKNOWN"
+        self.save(record)
+        result = self.cli("check")
+        self.assertEqual(result.returncode, 1, result.stdout)
+        self.assertIn("COMPLETE", result.stderr)
 
     def test_zero_tests_never_green(self):
         result = self.cli("run", "task-1", "--candidate", "synthetic-v1", "--layer", "unit",

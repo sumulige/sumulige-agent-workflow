@@ -1,0 +1,302 @@
+{
+  "mode": "bundle",
+  "total": 55,
+  "fail": 0,
+  "scope": "static structure/configuration only; no command or agent execution",
+  "checked_at": "2026-09-23T08:53:31.607588+00:00",
+  "input_sha256": {
+    "AGENTS.md": "ab0f516f2a48cb4e6b883c1b47f07b5d0d5486c52cb707e4b79b0c642282d49a",
+    "CLAUDE.md": "ef5dff1ccb6bc15a0a6d9a0b0ce4a9dc10c8f2a9bf4e780b16749ddedb53363c",
+    "docs/agent/project.json": "835c4cc53c67b50d727356048bd4d398d7826eedc84a98a92d8111f324ff20b2",
+    "docs/agent/project.md": "8540eea38d96bb1cfb12b9dff4a756d62a29aad42fd41b13d75c99bcb3ca2f95",
+    "docs/agent/workflow.md": "ce03f459c39265dc12744896be1f624f414b55cb9d44738316da310ea9715116",
+    "docs/agent/testing.md": "d5416da81a69669ba8760abb0d7b0de754730fbd34d6f701969cc1acc857ddd5",
+    "docs/agent/tooling.md": "4cb32e87e8000d4b10e0b0c5e656aa66e874d5fa44ce94d549887b4c886a944e",
+    "docs/agent/scenarios.md": "c100ba3cba7ddaee3b42344844113edf635bdaa38ceb00fd9a234597cc7246a1",
+    "docs/agent/clients.md": "fb8b8af59defdf0900c8e1448928b0915d5b82ca2113271dbb58756e7ab0ec0b",
+    "docs/agent/maintenance.md": "7174e3653c17dbef29e7a9eb7cd5aee9d8a2c9644327d1d4b36f96f00fcc67ce",
+    "docs/specs/_TEMPLATE/requirements.md": "c2083d6cc1b747191b810d4ce5b44bc29d1b40f44598707f91a17223f9cbfb0b",
+    "docs/specs/_TEMPLATE/design.md": "21ae26fbe114435a71e92e3fc81479db8a37fbcdf1688a39a42fa3fbe6fb065c",
+    "docs/specs/_TEMPLATE/tasks.md": "e5c2409687cadb28181af6981a0e5acd4cce08535b19255b4006fef775a8c156",
+    "docs/adr/0000-template.md": "50bd945aa2b2d4b77824869f9cf51edb651c6cf2901de96084545bd8d18f23ee",
+    ".agent/memory.example.md": "b9c01ad0f9f1b1ebed3deaba6ef071a114998ca33890f74265f7233fe7fc55e1",
+    "validation/check_bundle.py": "3aca77934e99ba995ad1fddd2296a98f86325cf96ac0218bbf194c638356974f"
+  },
+  "checks": [
+    {
+      "check": "root.directory",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:AGENTS.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:CLAUDE.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/agent/project.json",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/agent/project.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/agent/workflow.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/agent/testing.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/agent/tooling.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/agent/scenarios.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/agent/clients.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/agent/maintenance.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/specs/_TEMPLATE/requirements.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/specs/_TEMPLATE/design.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/specs/_TEMPLATE/tasks.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:docs/adr/0000-template.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:.agent/memory.example.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "file:validation/check_bundle.py",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "project.schema",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-1.body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-2.body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-3.body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-4.body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-5.body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-6.body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-7.body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-8.body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "agents.HR-9.body",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/project.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/project.json",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/workflow.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/testing.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/tooling.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/workflow.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/testing.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/tooling.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/clients.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/adr/0000-template.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:.agent/memory.example.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:AGENTS.md:docs/agent/maintenance.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:docs/agent/project.md:project.json",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:docs/agent/project.md:testing.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:docs/agent/workflow.md:project.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:docs/agent/workflow.md:testing.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:docs/agent/testing.md:scenarios.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:docs/agent/tooling.md:clients.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "link:docs/agent/scenarios.md:clients.md",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:GREEN",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:RED",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:UNTESTED",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:TIMEOUT",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:UNKNOWN",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:COMPLETE",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:PARTIAL",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "testing.state:BLOCKED",
+      "result": "pass",
+      "detail": ""
+    },
+    {
+      "check": "claude.import",
+      "result": "pass",
+      "detail": ""
+    }
+  ]
+}

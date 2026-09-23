@@ -40,6 +40,18 @@ class ManagedTests(unittest.TestCase):
         self.assertIn("UNCHANGED", result.stdout)
         self.assertEqual(snapshot(self.target), before)
 
+    def test_installed_task_cli_can_create_and_check_v2_without_source_imports(self):
+        self.install("--apply")
+        script = self.target / "validation/tasks.py"
+        result = subprocess.run([sys.executable, "-B", str(script), "create", "installed", "--root", str(self.target),
+                                 "--kind", "maintenance", "--title", "Installed CLI", "--objective", "Works alone",
+                                 "--scope", ".", "--authorization", "Synthetic test", "--acceptance", "Standalone",
+                                 "--apply"], cwd=self.target, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        result = subprocess.run([sys.executable, "-B", str(script), "check", "--root", str(self.target)],
+                                cwd=self.target, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
     def test_upgrade_and_rollback_preserve_project_config_and_documents(self):
         self.install("--apply")
         spec = self.target / "docs/PROJECT-SPEC.md"
@@ -69,6 +81,32 @@ class ManagedTests(unittest.TestCase):
         result = self.cli(self.target, "--profile", "registry", "--apply")
         self.assertEqual(result.returncode, 1)
         self.assertEqual(snapshot(self.target), before)
+
+    def test_extract_custom_rules_then_upgrade_twice_and_rollback_preserves_extension(self):
+        self.install("--apply")
+        rules = self.target / "AGENTS.md"
+        extension = self.target / ".agent/project-rules.md"
+        self.assertTrue(extension.is_file(), "Installer must initialize a project-owned extension")
+        baseline = rules.read_bytes()
+        custom = b"\nUse this project's existing formatter.\n"
+        rules.write_bytes(baseline + custom)
+        upstream = self.source / "AGENTS.md"
+        upstream.write_bytes(baseline + b"\nUpstream B.\n")
+        self.assertEqual(self.cli(self.target, "--apply").returncode, 1)
+        extension.write_bytes(extension.read_bytes() + custom)
+        rules.write_bytes(baseline)  # Explicit reviewed extraction, no force/adopt tool.
+        self.install("--apply")
+        self.assertTrue(extension.read_bytes().endswith(custom))
+        self.install("--check")
+        upstream.write_bytes(baseline + b"\nUpstream C.\n")
+        result = self.install("--apply")
+        identifier = result.stdout.split("TRANSACTION: ")[1].strip()
+        extension.write_bytes(extension.read_bytes() + b"\nLater local rule.\n")
+        expected = extension.read_bytes()
+        self.install("--rollback", identifier, "--apply")
+        self.assertEqual(rules.read_bytes(), baseline + b"\nUpstream B.\n")
+        self.assertEqual(extension.read_bytes(), expected)
+        self.install("--check")
 
     def test_first_install_conflict_does_not_create_other_files(self):
         (self.target / "AGENTS.md").write_text("Existing agreement\n")
