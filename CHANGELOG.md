@@ -2,7 +2,7 @@
 
 ## Unreleased — 2.3.0-dev
 
-1. 定位为 sumulige-coding-agent-workflow；远端名称与发布未变更，保留 v2.2 历史。
+1. GitHub 仓库已更名为 sumulige-coding-agent-workflow，工作流分支已合入 main；保留 v2.2 历史，尚未发布 release。
 2. 新增 core/web/registry 模板、安装锁、升级预览、冲突拒绝、备份与回退。
 3. 新增任务 JSON、证据检查、命令留档与 TODO 派生；区分任务、测试、审查和发布。
 4. 七客户端接入与全局入口预览；Cursor/Hermes 保留人工整合边界。

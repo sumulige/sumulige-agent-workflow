@@ -2,7 +2,7 @@
 
 统一 AI 编码项目的文档、任务、交接与验收证据。Python 3.10+ 标准库；没有模型调用或第三方运行依赖。
 
-当前为 **2.3.0-dev 候选**，基于 v2.2 候选扩展。远端尚未改名，源码暂用 [sumulige-agent-workflow](https://github.com/sumulige/sumulige-agent-workflow)。[交付记录](docs/changes/2026-09-coding-workflow/plan.md) 分别记录本地、原生客户端、独立审查与发布状态。
+当前为 **2.3.0-dev 候选**，已合入 main，尚未发布 release。源码：[sumulige-coding-agent-workflow](https://github.com/sumulige/sumulige-coding-agent-workflow)。[交付记录](docs/changes/2026-09-coding-workflow/plan.md) 分别记录本地、原生客户端、独立审查与发布状态；[合并与更名记录](docs/changes/2026-09-coding-workflow/publication.md) 保留远端操作依据。
 
 ## 1. 项目安装
 
