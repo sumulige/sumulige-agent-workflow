@@ -35,5 +35,9 @@ jobs:
         run: python3 -B validation/check_bundle.py --mode bundle
       - name: Run regression tests
         run: python3 -B -m unittest discover -s validation/tests -v
+      - name: Check task receipts and derived overview
+        run: |
+          python3 -B validation/tasks.py check --root .
+          python3 -B validation/tasks.py todo --root . --check
       - name: Ensure tracked files were not changed
         run: git diff --exit-code

@@ -1,5 +1,13 @@
 # 变更说明
 
+## Unreleased — 2.3.0-dev
+
+1. 定位为 sumulige-coding-agent-workflow；远端名称与发布未变更，保留 v2.2 历史。
+2. 新增 core/web/registry 模板、安装锁、升级预览、冲突拒绝、备份与回退。
+3. 新增任务 JSON、证据检查、命令留档与 TODO 派生；区分任务、测试、审查和发布。
+4. 七客户端接入与全局入口预览；Cursor/Hermes 保留人工整合边界。
+5. v2.2 配置与旧安装器兼容；临时项目回归不代替真实客户端或独立审查。
+
 ## v2.2 接入补充 — 2026-09-19
 
 按使用者提供的客户端组合，补充 Cursor、Pi Coding Agent、Hermes Agent、Codex 接入。

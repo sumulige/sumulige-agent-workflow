@@ -1,84 +1,84 @@
-# agent-workflow-bundle v2.2
+# sumulige-coding-agent-workflow
 
-面向 AI 编码代理的轻量仓库规则包：任务分级、授权边界、可核实交付，以及零第三方依赖的配置检查。
-**不是 Agent 调度平台，也不是沙箱。静态检查通过不代表项目就绪、模型行为可靠或权限隔离生效。**
+统一 AI 编码项目的文档、任务、交接与验收证据。Python 3.10+ 标准库；没有模型调用或第三方运行依赖。
 
-## 先看变化
+当前为 **2.3.0-dev 候选**，基于 v2.2 候选扩展。远端尚未改名，源码暂用 [sumulige-agent-workflow](https://github.com/sumulige/sumulige-agent-workflow)。[交付记录](docs/changes/2026-09-coding-workflow/plan.md) 分别记录本地、原生客户端、独立审查与发布状态。
 
-[v2.2 变更说明](CHANGELOG.md) · [核心规则](AGENTS.md) · [项目配置](docs/agent/project.md)
+## 1. 项目安装
 
-## 目标客户端
-
-**Cursor、Pi Coding Agent、Hermes Agent、Codex** 共用根目录 AGENTS.md；
-[四客户端接入指南](docs/agent/clients.md) 列出启动目录、覆盖文件、权限边界和接力记录。
-不需要四份规则，不自动安装客户端或修改个人设置；原有 CLAUDE.md 仅保留兼容。
-客户端版本、实际规则加载和权限仍须在用户环境单独验收，不能由本仓库 CI 代替。
-
-## 安全安装到已有项目
-
-在本规则包目录运行，Python 3.10+；目标目录须已存在。默认只预览：
+在分发仓库运行，目标目录须已存在：
 
 ```bash
-python3 -B validation/check_bundle.py --mode bundle
-python3 -B validation/install_bundle.py /path/to/target-repository
-# 审查 CREATE / SAME / CONFLICT 后再显式写入
-python3 -B validation/install_bundle.py /path/to/target-repository --apply
+python3 -B validation/manage.py /path/to/project --profile core
+# 审查 CREATE / LOCAL / SAME / UPDATE / CONFLICT 后才写入
+python3 -B validation/manage.py /path/to/project --profile core --apply
+python3 -B validation/manage.py /path/to/project --check
+python3 -B validation/adapters.py check /path/to/project
 ```
 
-安装器只复制声明的核心规则、配置模板、规格模板和检查器，不复制本 README、CI、测试结果或 .gitignore。
-任何内容冲突都会在写入前停止；相同文件跳过；已有文件绝不覆盖，没有 --force 选项。
-拒绝路径中的符号链接，写入使用排他创建。请在可信且没有并发修改的目录执行；这不是防竞态沙箱。
-I/O 故障中途失败会列出本次已创建文件，不删除其他成果；检查这些文件后再重试。
-新版配置始终以 unconfigured、空命令和保守提交/记忆策略安装，不继承来源项目的授权。
+1. core：AGENTS、README、CHANGELOG、TODO、产品范围、架构、开发、验收。
+2. web：core 加 DESIGN、PAGE-STRUCTURE、DEPLOYMENT。
+3. registry：web 加 COMPONENT-GUIDELINES、REGISTRY。
 
-已有 v2.1 或个性化规则时，先预览冲突，再在独立分支手动合并；不要把整个包覆盖到项目根目录。
-升级前记录 Git 差异并备份；仅回滚本次变更，不使用 reset --hard 清理已有成果。
-项目配置不会被安装器自动迁移或重置，发生冲突时原样保留。详细步骤见 [迁移说明](docs/agent/project.md)。
+项目文档与配置保留原样，共享规则冲突会阻止整个更新；先审阅合并，无强制覆盖。新文档以 DRAFT 初始化，不编造产品事实。初始化后补充真实命令与范围，由人确认 [项目状态](docs/agent/project.md)。
 
-## 初始化目标项目
+## 2. 日常使用
 
-在 docs/agent/project.json 中填写实际命令、工作目录和保护路径，保留 schema_version 与字段类型。
-由人授权试运行实际 lint/test 并记录结果，确认适用验证后再批准 configured：
+AI 按 [维护映射](docs/agent/maintenance.md) 随代码更新受影响文档。只读不写文件，小改动可继续用现有 Issue，复杂任务用 docs/changes/。
 
 ```bash
-python3 -B validation/check_bundle.py --mode ready
+python3 -B validation/tasks.py create cart-fix --root /path/to/project \
+  --title "修复购物车校验" --objective "空购物车不能结算" \
+  --scope src/cart --authorization "用户明确要求修复" \
+  --acceptance "空购物车被拒绝且有效购物车不受影响"
+# 上述只预览；审查后追加 --apply
+python3 -B validation/tasks.py check --root /path/to/project
+python3 -B validation/tasks.py todo --root /path/to/project
+# 审查后追加 --apply；CI 使用 --check
 ```
 
-ready 只做静态就绪检查，不执行命令、不证明测试通过。缺少运行证据不得声称项目可用。
-普通产品写入受状态门约束；只读任务与用户明确授权的规则/配置维护有独立路径。
+任务工具随新版安装到目标项目，也可从分发仓库调用。命令留档与 JSON 契约见维护说明。任务、测试、独立审查和发布分别记录。
 
-## 日常使用
+## 3. 升级与回退
 
-“只读点评”不生成规格或记忆；“修复这个 Bug”先确认复现和验收；明确批准的范围内继续工作。
-[工作流程](docs/agent/workflow.md) 说明任务分级，[验证规则](docs/agent/testing.md) 区分任务完成与测试五态。
-默认不自动提交；明确要求提交 GitHub 时使用任务分支与 PR，不自动合并、部署或修改仓库保护。
-四种目标客户端的工作流与执行隔离见 [工具接入](docs/agent/tooling.md)。
+用经核实的来源版本升级，锁记录版本与文件指纹，不自动追随 main。
 
-## 维护本规则包
+```bash
+python3 -B validation/manage.py /path/to/project
+python3 -B validation/manage.py /path/to/project --apply
+# 用上次输出的事务 ID；先预览再追加 --apply
+python3 -B validation/manage.py /path/to/project --rollback TRANSACTION_ID
+```
+
+备份保存旧字节，回退拒绝覆盖后续编辑。I/O 中断按事务记录恢复。备份可能含原有项目内容，应仅本地保存。工具适用于可信且无并发修改的目录，不提供操作系统隔离。
+旧 install_bundle.py 保持 v2.2 仅创建行为；无锁旧项目不自动接管不同的规则。
+
+## 4. 七客户端与全局入口
+
+Codex、Claude Code、Cursor、Hermes、Pi、Gemini CLI、OpenCode 共用项目 AGENTS.md；Claude/Gemini 使用薄导入入口。[客户端差异](docs/agent/clients.md)。
+
+```bash
+# 显式目标 home；默认仅预览
+python3 -B validation/adapters.py global --home /path/to/home
+python3 -B validation/adapters.py global --home /path/to/home --clients codex claude-code
+```
+
+全局工具支持标准目录布局，已有规则不同则拒绝。Codex、Claude、Pi、Gemini、OpenCode 有文件入口；Cursor/Hermes 输出 MANUAL 片段，保留原设置与 SOUL。自定义客户端目录需单独核实。项目初始化不会隐式安装全局入口或启动模型。
+
+## 5. 维护与验收
 
 ```bash
 python3 -B validation/check_bundle.py --mode bundle
 python3 -B -m unittest discover -s validation/tests -v
-python3 -B validation/check_bundle.py --json
+python3 -B validation/tasks.py check --root .
+python3 -B validation/tasks.py todo --root . --check
+git diff --check
 ```
 
-默认只向标准输出报告，不写 validation/results.json。JSON 附已检查输入文件的 SHA-256；保留证据需显式重定向。
-配置严格拒绝非法状态、重复键、错误类型、空的 configured 命令、非法超时和不安全路径。
-结构检查可发现空文件、缺失规则正文和部分断链，但不证明自然语言语义完整，不检查外链和 Markdown 锚点。
+测试使用临时项目，不操作真实 home。软件测试不能证明七客户端原生加载、权限隔离或模型遵守规则，真实验收按 [场景](docs/agent/scenarios.md) 分别留档。
 
-CI 对 Python 3.10/3.13 运行结构与回归测试，使用只读权限和固定 SHA，不注入秘密、不设置仓库保护。
-管理员应在看到真实检查运行后配置必需检查和独立评审；不能把“已添加工作流”说成“保护已开启”。
-[20 条通用 + 8 条客户端场景](docs/agent/scenarios.md) 是待执行清单，不是已经通过的行为测试。
-
-## 目录
-
-| 路径 | 职责 |
-|---|---|
-| AGENTS.md / CLAUDE.md | 共享核心规则 / Claude 导入 |
-| docs/agent/ | 唯一 JSON 配置、流程、验证、四客户端接入、工具来源与行为场景 |
-| docs/specs/_TEMPLATE/ / docs/adr/ | 需求、设计、任务与 ADR 模板 |
-| .agent/memory.example.md | 经验证经验与交接格式，不自动写共享记忆 |
-| validation/check_bundle.py | 只读静态检查器，不执行项目命令 |
-| validation/install_bundle.py | 默认预览、冲突拒绝、仅创建的安装器 |
-| validation/tests/ | 使用临时仓库的反例与回归测试 |
-| .github/workflows/bundle-check.yml | 本规则包 CI，不自动部署到目标项目 |
+1. [产品范围](docs/PROJECT-SPEC.md)
+2. [架构](docs/ARCHITECTURE.md)
+3. [开发](docs/DEVELOPMENT.md)
+4. [验收](docs/TESTING.md)
+5. [任务](TODO.md)

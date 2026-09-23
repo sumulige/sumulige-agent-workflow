@@ -1,0 +1,79 @@
+COMMAND: /opt/homebrew/opt/python@3.14/bin/python3.14 -B -m unittest discover -s validation/tests -v
+CWD: repository root
+PYTHON: 3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]
+CANDIDATE: sha256:16b73482f30b6ad619e3014a97ef877be7bcfd5ad6de37d9f678a193a42084b8
+EXIT: 0
+test_bad_source_or_target_refused (test_bundle.BundleTests.test_bad_source_or_target_refused) ... ok
+test_broken_or_escaping_local_link_fails (test_bundle.BundleTests.test_broken_or_escaping_local_link_fails) ... ok
+test_cli_json_and_exit_codes (test_bundle.BundleTests.test_cli_json_and_exit_codes) ... ok
+test_commands_are_never_executed (test_bundle.BundleTests.test_commands_are_never_executed) ... ok
+test_comment_only_body_fails (test_bundle.BundleTests.test_comment_only_body_fails) ... ok
+test_configured_empty_commands_fail_in_both_modes (test_bundle.BundleTests.test_configured_empty_commands_fail_in_both_modes) ... ok
+test_configured_target_is_preserved_on_upgrade (test_bundle.BundleTests.test_configured_target_is_preserved_on_upgrade) ... ok
+test_configured_valid (test_bundle.BundleTests.test_configured_valid) ... ok
+test_conflict_is_all_or_nothing (test_bundle.BundleTests.test_conflict_is_all_or_nothing) ... ok
+test_duplicate_and_nonstandard_json_rejected (test_bundle.BundleTests.test_duplicate_and_nonstandard_json_rejected) ... ok
+test_empty_and_missing_core_files (test_bundle.BundleTests.test_empty_and_missing_core_files) ... ok
+test_install_apply_repeat_and_exclusions (test_bundle.BundleTests.test_install_apply_repeat_and_exclusions) ... ok
+test_install_parent_file_conflict (test_bundle.BundleTests.test_install_parent_file_conflict) ... ok
+test_install_preview_does_not_write (test_bundle.BundleTests.test_install_preview_does_not_write) ... ok
+test_install_symlink_parent_and_file_refused (test_bundle.BundleTests.test_install_symlink_parent_and_file_refused) ... ok
+test_installer_cli_without_bytecode_flag_is_read_only (test_bundle.BundleTests.test_installer_cli_without_bytecode_flag_is_read_only) ... ok
+test_installer_does_not_transfer_configuration (test_bundle.BundleTests.test_installer_does_not_transfer_configuration) ... ok
+test_invalid_configuration_values (test_bundle.BundleTests.test_invalid_configuration_values) ... ok
+test_invalid_utf8_reports_failure (test_bundle.BundleTests.test_invalid_utf8_reports_failure) ... ok
+test_io_failure_reports_partial_without_deleting_files (test_bundle.BundleTests.test_io_failure_reports_partial_without_deleting_files) ... ok
+test_malformed_config_fails_without_crash (test_bundle.BundleTests.test_malformed_config_fails_without_crash) ... ok
+test_markers_without_rule_body_fail (test_bundle.BundleTests.test_markers_without_rule_body_fail) ... ok
+test_missing_and_unknown_fields_fail (test_bundle.BundleTests.test_missing_and_unknown_fields_fail) ... ok
+test_missing_root_and_invalid_mode (test_bundle.BundleTests.test_missing_root_and_invalid_mode) ... ok
+test_no_side_effects_and_hashes_match (test_bundle.BundleTests.test_no_side_effects_and_hashes_match) ... ok
+test_protected_paths_duplicate_or_weakened (test_bundle.BundleTests.test_protected_paths_duplicate_or_weakened) ... ok
+test_python_sources_parse_without_bytecode (test_bundle.BundleTests.test_python_sources_parse_without_bytecode) ... ok
+test_symlink_core_file_is_not_read (test_bundle.BundleTests.test_symlink_core_file_is_not_read) ... ok
+test_symlink_working_directory_rejected (test_bundle.BundleTests.test_symlink_working_directory_rejected) ... ok
+test_valid_template_is_not_ready (test_bundle.BundleTests.test_valid_template_is_not_ready) ... ok
+test_working_directory_must_exist_when_ready (test_bundle.BundleTests.test_working_directory_must_exist_when_ready) ... ok
+test_four_client_guide_is_validated_and_installed (test_clients.ClientInstallTests.test_four_client_guide_is_validated_and_installed) ... ok
+test_install_does_not_generate_client_overrides_or_runtime_settings (test_clients.ClientInstallTests.test_install_does_not_generate_client_overrides_or_runtime_settings) ... ok
+test_install_preserves_client_local_context_and_settings (test_clients.ClientInstallTests.test_install_preserves_client_local_context_and_settings) ... ok
+test_all_seven_entries_and_override_diagnostics (test_managed.ManagedTests.test_all_seven_entries_and_override_diagnostics) ... ok
+test_backups_are_git_ignored_even_in_an_existing_project (test_managed.ManagedTests.test_backups_are_git_ignored_even_in_an_existing_project) ... ok
+test_broken_document_links_are_reported (test_managed.ManagedTests.test_broken_document_links_are_reported) ... ok
+test_custom_rule_conflict_is_all_or_nothing (test_managed.ManagedTests.test_custom_rule_conflict_is_all_or_nothing) ... ok
+test_empty_source_template_cannot_be_installed (test_managed.ManagedTests.test_empty_source_template_cannot_be_installed) ... ok
+test_first_install_conflict_does_not_create_other_files (test_managed.ManagedTests.test_first_install_conflict_does_not_create_other_files) ... ok
+test_invalid_lock_duplicate_keys_and_deleted_owned_file_are_rejected (test_managed.ManagedTests.test_invalid_lock_duplicate_keys_and_deleted_owned_file_are_rejected) ... ok
+test_profiles_add_documents_without_downgrade_deletion (test_managed.ManagedTests.test_profiles_add_documents_without_downgrade_deletion) ... ok
+test_repeated_install_is_idempotent_including_backups (test_managed.ManagedTests.test_repeated_install_is_idempotent_including_backups) ... ok
+test_rollback_initial_install_removes_only_owned_files (test_managed.ManagedTests.test_rollback_initial_install_removes_only_owned_files) ... ok
+test_rollback_refuses_post_install_edits (test_managed.ManagedTests.test_rollback_refuses_post_install_edits) ... ok
+test_symlink_parent_is_rejected_without_following_it (test_managed.ManagedTests.test_symlink_parent_is_rejected_without_following_it) ... ok
+test_upgrade_and_rollback_preserve_project_config_and_documents (test_managed.ManagedTests.test_upgrade_and_rollback_preserve_project_config_and_documents) ... ok
+test_changed_precondition_prevents_any_transaction (test_storage.RecoveryTests.test_changed_precondition_prevents_any_transaction) ... ok
+test_modified_backup_is_not_restored (test_storage.RecoveryTests.test_modified_backup_is_not_restored) ... ok
+test_partial_os_failure_can_be_rolled_back_without_touching_unrelated_files (test_storage.RecoveryTests.test_partial_os_failure_can_be_rolled_back_without_touching_unrelated_files) ... ok
+test_changed_evidence_artifact_is_rejected (test_tasks.TaskTests.test_changed_evidence_artifact_is_rejected) ... ok
+test_complete_does_not_imply_release_or_test_green (test_tasks.TaskTests.test_complete_does_not_imply_release_or_test_green) ... ok
+test_duplicate_json_and_path_escape_fail_without_traceback (test_tasks.TaskTests.test_duplicate_json_and_path_escape_fail_without_traceback) ... ok
+test_green_requires_actual_nonzero_test_evidence (test_tasks.TaskTests.test_green_requires_actual_nonzero_test_evidence) ... ok
+test_missing_executable_is_unknown_not_regression_failure (test_tasks.TaskTests.test_missing_executable_is_unknown_not_regression_failure) ... ok
+test_old_candidate_evidence_cannot_close_new_candidate (test_tasks.TaskTests.test_old_candidate_evidence_cannot_close_new_candidate) ... ok
+test_run_preview_never_executes_or_writes (test_tasks.TaskTests.test_run_preview_never_executes_or_writes) ... ok
+test_same_implementer_cannot_supply_independent_review (test_tasks.TaskTests.test_same_implementer_cannot_supply_independent_review) ... ok
+test_symlink_evidence_is_not_followed (test_tasks.TaskTests.test_symlink_evidence_is_not_followed) ... ok
+test_timeout_is_recorded_separately (test_tasks.TaskTests.test_timeout_is_recorded_separately) ... ok
+test_todo_preserves_user_text_and_rejects_missing_markers (test_tasks.TaskTests.test_todo_preserves_user_text_and_rejects_missing_markers) ... ok
+test_zero_tests_never_green (test_tasks.TaskTests.test_zero_tests_never_green) ... ok
+test_failed_command_is_recorded_and_todo_comes_from_task (test_workflow.WorkflowTests.test_failed_command_is_recorded_and_todo_comes_from_task) ... ok
+test_global_bootstrap_shares_one_version_and_preserves_conflicting_rules (test_workflow.WorkflowTests.test_global_bootstrap_shares_one_version_and_preserves_conflicting_rules) ... ok
+test_installed_registry_profile_checks_documents_and_detects_rule_drift (test_workflow.WorkflowTests.test_installed_registry_profile_checks_documents_and_detects_rule_drift) ... ok
+test_preview_then_install_core_without_overwriting_existing_readme (test_workflow.WorkflowTests.test_preview_then_install_core_without_overwriting_existing_readme) ... ok
+test_task_cannot_claim_complete_without_acceptance_evidence (test_workflow.WorkflowTests.test_task_cannot_claim_complete_without_acceptance_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 67 tests in 5.947s
+
+OK
+
+Python 3.10 syntax parse: PASS
