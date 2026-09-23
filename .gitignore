@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+validation/results.json
+.agent/runs/
+.agent/workflow-backups/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "id": "2026-09-coding-workflow",
+  "title": "跨客户端编码工作流 v2.3 候选",
+  "objective": "交付共享规则、项目文档、任务证据与保守升级工具",
+  "source": "用户当前任务：帮我实施；完成验证后提交推送",
+  "scope": [
+    "."
+  ],
+  "authorization": "已批准本地实现、验证、提交与本任务分支推送；全局安装、改名、合并、发布另行确认",
+  "candidate": "sha256:b616fd0db430de48295bb693d0c80cb66ee52ecf7a7f8e91b9b6e8ead15ca81d",
+  "implementer": "primary-agent",
+  "status": "PARTIAL",
+  "test_status": "GREEN",
+  "release": {
+    "status": "UNRELEASED",
+    "reference": ""
+  },
+  "review": {
+    "required": true,
+    "status": "UNKNOWN",
+    "reviewer": "",
+    "reference": "",
+    "candidate": ""
+  },
+  "acceptance": [
+    {
+      "id": "ac-1",
+      "description": "三种模板与七客户端入口文件可在临时项目交付",
+      "required": true,
+      "status": "VERIFIED",
+      "evidence": [
+        "regression"
+      ]
+    },
+    {
+      "id": "ac-2",
+      "description": "安装、升级、冲突、回退和无关内容保护",
+      "required": true,
+      "status": "VERIFIED",
+      "evidence": [
+        "regression"
+      ]
+    },
+    {
+      "id": "ac-3",
+      "description": "任务证据、测试状态、TODO 与只读预览行为",
+      "required": true,
+      "status": "VERIFIED",
+      "evidence": [
+        "regression"
+      ]
+    },
+    {
+      "id": "ac-4",
+      "description": "核心规则与配置结构通过静态检查",
+      "required": true,
+      "status": "VERIFIED",
+      "evidence": [
+        "bundle"
+      ]
+    },
+    {
+      "id": "ac-5",
+      "description": "七个真实客户端的加载、只读边界和中断接力场景",
+      "required": true,
+      "status": "UNKNOWN",
+      "evidence": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "regression",
+      "layer": "integration",
+      "status": "VERIFIED",
+      "candidate": "sha256:b616fd0db430de48295bb693d0c80cb66ee52ecf7a7f8e91b9b6e8ead15ca81d",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/tests",
+        "-v"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "count": 67,
+      "artifact": "docs/changes/2026-09-coding-workflow/checks.log",
+      "sha256": "1ccab07692bcd7ebc072ef415782f047cf9fd74f20548cdbd2280d2cdd17637e"
+    },
+    {
+      "id": "bundle",
+      "layer": "static",
+      "status": "VERIFIED",
+      "candidate": "sha256:b616fd0db430de48295bb693d0c80cb66ee52ecf7a7f8e91b9b6e8ead15ca81d",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "validation/check_bundle.py",
+        "--json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "count": null,
+      "artifact": "docs/changes/2026-09-coding-workflow/bundle.json",
+      "sha256": "8cc38e364d55dc14065caea3eff1097542afadd7ab6606be6ce061bdf320225e"
+    }
+  ],
+  "next": "独立审查及七客户端原生场景；新候选 CI 与发布分别验收"
+}

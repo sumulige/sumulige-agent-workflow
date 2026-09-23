@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "unconfigured",
+  "test_command": "",
+  "lint_command": "",
+  "working_directory": ".",
+  "protected_paths": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/agent/",
+    "validation/",
+    ".github/"
+  ],
+  "timeout_seconds": 600,
+  "commit_policy": "explicit-request",
+  "memory_policy": "suggest-only"
+}
