@@ -2,6 +2,8 @@
 
 统一 AI 编码项目的文档、任务、交接与验收证据。Python 3.10+ 标准库；没有模型调用或第三方运行依赖。
 
+复杂任务先形成书面方案，让用户与 AI 对目标、背景、实施路径和完成标准形成共同理解，并在执行过程中持续更新，作为执行、调整与验收的依据。方案围绕四项目标展开：建立共识、同步背景、约束执行、持续留痕；具体要求见[工作流程](docs/agent/workflow.md)。
+
 当前为 **2.3.0-dev 候选**，已合入 main，尚未发布 release。源码：[sumulige-coding-agent-workflow](https://github.com/sumulige/sumulige-coding-agent-workflow)。[交付记录](docs/changes/2026-09-coding-workflow/plan.md) 分别记录本地、原生客户端、独立审查与发布状态；[合并与更名记录](docs/changes/2026-09-coding-workflow/publication.md) 保留远端操作依据。
 
 ## 1. 项目安装
