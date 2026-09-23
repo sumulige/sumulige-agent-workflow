@@ -1,7 +1,7 @@
 COMMAND: /opt/homebrew/opt/python@3.14/bin/python3.14 -B -m unittest discover -s validation/tests -v
 CWD: repository root
 PYTHON: 3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]
-CANDIDATE: sha256:16b73482f30b6ad619e3014a97ef877be7bcfd5ad6de37d9f678a193a42084b8
+CANDIDATE: sha256:b616fd0db430de48295bb693d0c80cb66ee52ecf7a7f8e91b9b6e8ead15ca81d
 EXIT: 0
 test_bad_source_or_target_refused (test_bundle.BundleTests.test_bad_source_or_target_refused) ... ok
 test_broken_or_escaping_local_link_fails (test_bundle.BundleTests.test_broken_or_escaping_local_link_fails) ... ok
@@ -72,8 +72,6 @@ test_preview_then_install_core_without_overwriting_existing_readme (test_workflo
 test_task_cannot_claim_complete_without_acceptance_evidence (test_workflow.WorkflowTests.test_task_cannot_claim_complete_without_acceptance_evidence) ... ok
 
 ----------------------------------------------------------------------
-Ran 67 tests in 5.947s
+Ran 67 tests in 5.661s
 
 OK
-
-Python 3.10 syntax parse: PASS

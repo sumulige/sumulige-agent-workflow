@@ -3,7 +3,7 @@
   "total": 55,
   "fail": 0,
   "scope": "static structure/configuration only; no command or agent execution",
-  "checked_at": "2026-09-23T06:42:42.533396+00:00",
+  "checked_at": "2026-09-23T06:47:01.706665+00:00",
   "input_sha256": {
     "AGENTS.md": "fffcfe9ecffacbed91ded885ddee2bc17db1c007992391df822f66766a79059f",
     "CLAUDE.md": "ef5dff1ccb6bc15a0a6d9a0b0ce4a9dc10c8f2a9bf4e780b16749ddedb53363c",

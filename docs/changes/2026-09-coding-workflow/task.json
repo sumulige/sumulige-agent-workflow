@@ -8,7 +8,7 @@
     "."
   ],
   "authorization": "已批准本地实现、验证、提交与本任务分支推送；全局安装、改名、合并、发布另行确认",
-  "candidate": "sha256:16b73482f30b6ad619e3014a97ef877be7bcfd5ad6de37d9f678a193a42084b8",
+  "candidate": "sha256:b616fd0db430de48295bb693d0c80cb66ee52ecf7a7f8e91b9b6e8ead15ca81d",
   "implementer": "primary-agent",
   "status": "PARTIAL",
   "test_status": "GREEN",
@@ -73,7 +73,7 @@
       "id": "regression",
       "layer": "integration",
       "status": "VERIFIED",
-      "candidate": "sha256:16b73482f30b6ad619e3014a97ef877be7bcfd5ad6de37d9f678a193a42084b8",
+      "candidate": "sha256:b616fd0db430de48295bb693d0c80cb66ee52ecf7a7f8e91b9b6e8ead15ca81d",
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-B",
@@ -88,13 +88,13 @@
       "exit_code": 0,
       "count": 67,
       "artifact": "docs/changes/2026-09-coding-workflow/checks.log",
-      "sha256": "dca653c67f1fb17365987778296644808569aff3358c629f3062b05b024e1ad2"
+      "sha256": "1ccab07692bcd7ebc072ef415782f047cf9fd74f20548cdbd2280d2cdd17637e"
     },
     {
       "id": "bundle",
       "layer": "static",
       "status": "VERIFIED",
-      "candidate": "sha256:16b73482f30b6ad619e3014a97ef877be7bcfd5ad6de37d9f678a193a42084b8",
+      "candidate": "sha256:b616fd0db430de48295bb693d0c80cb66ee52ecf7a7f8e91b9b6e8ead15ca81d",
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-B",
@@ -105,8 +105,8 @@
       "exit_code": 0,
       "count": null,
       "artifact": "docs/changes/2026-09-coding-workflow/bundle.json",
-      "sha256": "4ce83b2596468b4c0a4acc85945de3a03a276baf30a7e83ce8804564f1cd0ab1"
+      "sha256": "8cc38e364d55dc14065caea3eff1097542afadd7ab6606be6ce061bdf320225e"
     }
   ],
-  "next": "独立审查及七客户端原生场景；GitHub 认证失效时恢复登录后推送"
+  "next": "独立审查及七客户端原生场景；新候选 CI 与发布分别验收"
 }

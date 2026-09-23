@@ -2,7 +2,7 @@
   "base_commit": "44e7a80f65aa30f2a237c5b740bc5e69e090dc3b",
   "files": {
     ".agent/memory.example.md": "b9c01ad0f9f1b1ebed3deaba6ef071a114998ca33890f74265f7233fe7fc55e1",
-    ".github/workflows/bundle-check.yml": "b26d185f9afbff7e4e0f330454be1c128ed35c28639061d3f2d93b9a2068e0a5",
+    ".github/workflows/bundle-check.yml": "a474240b25370de309a3196e4ac4d6829e759bf1cfe83811a3511e4b023370de",
     ".gitignore": "19f57eb1a8e42b76fcd88d539c21cf3586213f71857f9261a81d658e8be27914",
     "AGENTS.md": "fffcfe9ecffacbed91ded885ddee2bc17db1c007992391df822f66766a79059f",
     "CHANGELOG.md": "972bdd565df17424959a89e20f82b05ac930e3237810d822b9a15a65588fff8f",
