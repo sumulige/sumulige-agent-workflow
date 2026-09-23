@@ -1,0 +1,111 @@
+{
+  "candidate": "sha256:f0c56cfe72e34ea5c961a2c326a9c306fda44ae4668a018ad06434eedfacf253",
+  "checks": [
+    {
+      "check": "旧版安装预览不写入",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "安装保留已有 README",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "真实行为缺陷产生 RED",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "升级冲突不覆盖任何文件",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "保留定制与配置后升级成功",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "v1 新执行要求显式迁移",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "迁移预览保留原文",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "迁移保存原始任务且不猜测旧证据",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "真实测试通过并保留 lint 失败",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "lint 失败明确阻止完成",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "候选改变使旧测试失效",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "缩减测试范围被拒绝且没有执行",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "全绿不冒充独立审查",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "新 CLI 进程可恢复任务与候选",
+      "detail": "验证磁盘交接与新进程读取；未启动第二个 AI 客户端",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "七客户端入口文件诊断",
+      "detail": "仅文件诊断，不代表原生加载或模型遵守",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "重复安装不修改现有项目",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "回退保护后续新增证据",
+      "detail": "",
+      "status": "VERIFIED"
+    },
+    {
+      "check": "迁移与分发可按顺序回退",
+      "detail": "",
+      "status": "VERIFIED"
+    }
+  ],
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/private/tmp/workflow-local-lock-fix-cikg_7f9/verify.py"
+  ],
+  "command_count": 29,
+  "exit_code": 0,
+  "full_report": "/private/tmp/workflow-local-lock-fix-cikg_7f9/report.json",
+  "full_report_sha256": "312a2e25a7c58302ea0f5e706bcd09139bd7cce2bed1bb6e03e2dfd4050fd315",
+  "independent_review": "UNKNOWN - no reviewer identity fabricated",
+  "native_clients": "UNKNOWN - no model sessions or delegated agents launched",
+  "production_changes": false,
+  "python": "3.14.7",
+  "runner_sha256": "66be1aed995db981d0fcd37afe65755335aa64da73be30e9ed802952f5f2b96b",
+  "scope": "Synthetic project, actual CLI processes; no native AI clients",
+  "upgrade_from": "538d7242b982b0249385882599eb1d567f8c6f49"
+}

@@ -64,7 +64,9 @@ def project_plan(source: Path, target: Path, profile: str | None = None):
         else:
             state = "CONFLICT"
         plan.append((path, state, current, desired))
-        entries[path] = {"sha256": digest(desired), "ownership": ownership}
+        # Local fingerprints record registration, not subsequent project edits.
+        entries[path] = previous if ownership == "local" and previous else {
+            "sha256": digest(desired), "ownership": ownership}
     lock = encoded({"schema_version": 1, "version": VERSION, "profile": profile, "files": entries})
     plan.append((LOCK, "SAME" if lock == old_data else "UPDATE" if old else "CREATE", old_data, lock))
     return plan

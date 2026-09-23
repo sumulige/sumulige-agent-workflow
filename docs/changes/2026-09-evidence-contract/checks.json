@@ -1,0 +1,36 @@
+[
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "validation/tests",
+      "-v"
+    ],
+    "cwd": ".",
+    "description": "完整规则包 CLI 回归",
+    "id": "regression",
+    "layer": "integration",
+    "min_count": 86,
+    "required": true
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "validation/check_bundle.py",
+      "--mode",
+      "bundle",
+      "--json"
+    ],
+    "cwd": ".",
+    "description": "规则与配置结构检查",
+    "id": "bundle",
+    "layer": "static",
+    "min_count": null,
+    "required": true
+  }
+]

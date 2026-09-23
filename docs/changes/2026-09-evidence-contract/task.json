@@ -1,0 +1,178 @@
+{
+  "acceptance": [
+    {
+      "description": "必需检查、范围、原始 outcome 与完成判定一致",
+      "evidence": [
+        "regression"
+      ],
+      "id": "ac-1",
+      "required": true,
+      "status": "VERIFIED"
+    },
+    {
+      "description": "v1 历史读取、迁移备份与发布候选正确",
+      "evidence": [
+        "regression"
+      ],
+      "id": "ac-2",
+      "required": true,
+      "status": "VERIFIED"
+    },
+    {
+      "description": "安装后的 CLI 以及定制规则升级回退可用",
+      "evidence": [
+        "regression",
+        "usability"
+      ],
+      "id": "ac-3",
+      "required": true,
+      "status": "VERIFIED"
+    },
+    {
+      "description": "规则、配置与文档结构通过检查",
+      "evidence": [
+        "bundle"
+      ],
+      "id": "ac-4",
+      "required": true,
+      "status": "VERIFIED"
+    }
+  ],
+  "authorization": "用户明确批准 contract-proposal.md；本任务治理工具维护与验证，沿用验证后提交分支推送授权；用户要求修正可用性验证发现的 local 指纹额外写入",
+  "candidate": "sha256:f0c56cfe72e34ea5c961a2c326a9c306fda44ae4668a018ad06434eedfacf253",
+  "contract": {
+    "basis": "已批准的规则包治理维护；目标项目配置保持 unconfigured，不冒充产品就绪",
+    "checks": [
+      {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "validation/tests",
+          "-v"
+        ],
+        "cwd": ".",
+        "description": "完整规则包 CLI 回归",
+        "id": "regression",
+        "layer": "integration",
+        "min_count": 86,
+        "required": true
+      },
+      {
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-B",
+          "validation/check_bundle.py",
+          "--mode",
+          "bundle",
+          "--json"
+        ],
+        "cwd": ".",
+        "description": "规则与配置结构检查",
+        "id": "bundle",
+        "layer": "static",
+        "min_count": null,
+        "required": true
+      }
+    ],
+    "kind": "maintenance",
+    "project_sha256": ""
+  },
+  "evidence": [
+    {
+      "artifact": "docs/changes/2026-09-evidence-contract/checks.log",
+      "candidate": "sha256:f0c56cfe72e34ea5c961a2c326a9c306fda44ae4668a018ad06434eedfacf253",
+      "check_id": "regression",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "validation/tests",
+        "-v"
+      ],
+      "contract": "08a8b27af9a9f4e34b4f3384d5a57b7f5bc2033eb5ced012a6f769074f9aa21b",
+      "count": 87,
+      "cwd": ".",
+      "exit_code": 0,
+      "id": "regression",
+      "layer": "integration",
+      "outcome": "exited",
+      "sha256": "61b890d06172064cc1003fd04eb7fcdfbfa6c5e2aebbb176830732f62e9b741c",
+      "status": "VERIFIED"
+    },
+    {
+      "artifact": "docs/changes/2026-09-evidence-contract/bundle.json",
+      "candidate": "sha256:f0c56cfe72e34ea5c961a2c326a9c306fda44ae4668a018ad06434eedfacf253",
+      "check_id": "bundle",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "validation/check_bundle.py",
+        "--mode",
+        "bundle",
+        "--json"
+      ],
+      "contract": "08a8b27af9a9f4e34b4f3384d5a57b7f5bc2033eb5ced012a6f769074f9aa21b",
+      "count": null,
+      "cwd": ".",
+      "exit_code": 0,
+      "id": "bundle",
+      "layer": "static",
+      "outcome": "exited",
+      "sha256": "0d303072ef0bb5e0ff2c5d2a0aac4cc4a57411c3b4885a90a9b9091237ee935a",
+      "status": "VERIFIED"
+    },
+    {
+      "artifact": "docs/changes/2026-09-evidence-contract/usability.json",
+      "candidate": "sha256:f0c56cfe72e34ea5c961a2c326a9c306fda44ae4668a018ad06434eedfacf253",
+      "check_id": "",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/private/tmp/workflow-local-lock-fix-cikg_7f9/verify.py"
+      ],
+      "contract": "08a8b27af9a9f4e34b4f3384d5a57b7f5bc2033eb5ced012a6f769074f9aa21b",
+      "count": null,
+      "cwd": ".",
+      "exit_code": 0,
+      "id": "usability",
+      "layer": "runtime",
+      "outcome": "exited",
+      "sha256": "90158af870033bc34c7e6d7146b0116e211ae94fd28b094ddd45c678c18b8bc9",
+      "status": "VERIFIED"
+    }
+  ],
+  "id": "2026-09-evidence-contract",
+  "implementer": "primary-agent",
+  "next": "独立审查当前候选；核对分支 CI；随后开展经授权的两客户端真实接力试点",
+  "objective": "必需检查、候选和证据保持一致，项目定制可持续升级",
+  "releases": [],
+  "review": {
+    "candidate": "",
+    "contract": "",
+    "reference": "",
+    "required": true,
+    "reviewer": "",
+    "status": "UNKNOWN"
+  },
+  "schema_version": 2,
+  "scope": [
+    "validation/",
+    "docs/",
+    "templates/",
+    "AGENTS.md",
+    "README.md",
+    "CHANGELOG.md",
+    "TODO.md"
+  ],
+  "source": "docs/changes/2026-09-evidence-contract/contract-proposal.md",
+  "status": "PARTIAL",
+  "test_status": "GREEN",
+  "title": "任务 v2 检查契约与定制升级修复"
+}

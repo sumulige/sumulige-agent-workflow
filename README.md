@@ -20,7 +20,7 @@ python3 -B validation/adapters.py check /path/to/project
 2. web：core 加 DESIGN、PAGE-STRUCTURE、DEPLOYMENT。
 3. registry：web 加 COMPONENT-GUIDELINES、REGISTRY。
 
-项目文档与配置保留原样，共享规则冲突会阻止整个更新；先审阅合并，无强制覆盖。新文档以 DRAFT 初始化，不编造产品事实。初始化后补充真实命令与范围，由人确认 [项目状态](docs/agent/project.md)。
+项目文档与配置保留原样，共享规则冲突会阻止整个更新。项目定制写入 `.agent/project-rules.md`；已有 managed 定制先审阅移入扩展文件、恢复核实过的共享基线，再升级，无强制覆盖。新文档以 DRAFT 初始化。初始化后补充真实命令与范围，由人确认 [项目状态](docs/agent/project.md)。
 
 ## 2. 日常使用
 
@@ -37,7 +37,7 @@ python3 -B validation/tasks.py todo --root /path/to/project
 # 审查后追加 --apply；CI 使用 --check
 ```
 
-任务工具随新版安装到目标项目，也可从分发仓库调用。命令留档与 JSON 契约见维护说明。任务、测试、独立审查和发布分别记录。
+任务工具随新版安装到目标项目，也可从分发仓库调用。新任务采用 v2 检查契约，code 默认要求已配置的 lint/test；治理或文档任务显式使用 --kind maintenance。用 --check-id 绑定必需检查，检查参数改变不能沿用旧验收。命令、v1 备份迁移和完整 JSON 契约见 [维护说明](docs/agent/maintenance.md)。任务、测试、独立审查和发布分别记录。
 
 ## 3. 升级与回退
 
