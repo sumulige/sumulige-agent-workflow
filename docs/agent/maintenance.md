@@ -27,6 +27,7 @@
 在分发仓库运行 validation/manage.py，默认预览，--apply 才写入。
 `.agent/workflow-lock.json` 记录版本、文件 SHA-256 与归属；规则 managed，项目事实 local。
 更新仅覆盖与上次安装 hash 一致的规则；自定义规则冲突阻止整个更新。local 文件保留。
+local 的 hash 只记录首次登记的内容；已有锁保留原值。本地编辑不会单独触发锁刷新或备份事务。
 项目特有约定写入 local 的 `.agent/project-rules.md`，共享入口按文件存在性读取。
 已有 managed 定制：先保留原差异，将项目约定审阅后移到扩展文件，再用核实过的上次安装内容恢复共享基线，随后预览升级。
 不能只把 A+X 人工合并成 B+X 后重试；B+X 仍属 managed 漂移。工具不提供 force/adopt，不自动拆分用户规则。

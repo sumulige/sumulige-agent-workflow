@@ -56,6 +56,7 @@ test_extract_custom_rules_then_upgrade_twice_and_rollback_preserves_extension (t
 test_first_install_conflict_does_not_create_other_files (test_managed.ManagedTests.test_first_install_conflict_does_not_create_other_files) ... ok
 test_installed_task_cli_can_create_and_check_v2_without_source_imports (test_managed.ManagedTests.test_installed_task_cli_can_create_and_check_v2_without_source_imports) ... ok
 test_invalid_lock_duplicate_keys_and_deleted_owned_file_are_rejected (test_managed.ManagedTests.test_invalid_lock_duplicate_keys_and_deleted_owned_file_are_rejected) ... ok
+test_local_edits_do_not_refresh_lock_or_create_backups (test_managed.ManagedTests.test_local_edits_do_not_refresh_lock_or_create_backups) ... ok
 test_profiles_add_documents_without_downgrade_deletion (test_managed.ManagedTests.test_profiles_add_documents_without_downgrade_deletion) ... ok
 test_repeated_install_is_idempotent_including_backups (test_managed.ManagedTests.test_repeated_install_is_idempotent_including_backups) ... ok
 test_rollback_initial_install_removes_only_owned_files (test_managed.ManagedTests.test_rollback_initial_install_removes_only_owned_files) ... ok
@@ -86,6 +87,6 @@ test_preview_then_install_core_without_overwriting_existing_readme (test_workflo
 test_task_cannot_claim_complete_without_acceptance_evidence (test_workflow.WorkflowTests.test_task_cannot_claim_complete_without_acceptance_evidence) ... ok
 
 ----------------------------------------------------------------------
-Ran 86 tests in 13.086s
+Ran 87 tests in 15.661s
 
 OK

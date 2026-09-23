@@ -40,6 +40,24 @@ class ManagedTests(unittest.TestCase):
         self.assertIn("UNCHANGED", result.stdout)
         self.assertEqual(snapshot(self.target), before)
 
+    def test_local_edits_do_not_refresh_lock_or_create_backups(self):
+        self.install("--apply")
+        for relative in ("README.md", "TODO.md", "docs/PROJECT-SPEC.md", ".agent/project-rules.md"):
+            path = self.target / relative
+            path.write_text(path.read_text() + "\nProject-owned update.\n")
+        config_path = self.target / "docs/agent/project.json"
+        config = json.loads(config_path.read_text())
+        config.update(status="configured", lint_command="python -m lint", test_command="python -m unittest")
+        config_path.write_text(json.dumps(config))
+        before = snapshot(self.target)
+        self.install("--check")
+        preview = self.install()
+        self.assertIn("SAME: .agent/workflow-lock.json", preview.stdout)
+        self.assertEqual(snapshot(self.target), before)
+        result = self.install("--apply")
+        self.assertIn("UNCHANGED", result.stdout)
+        self.assertEqual(snapshot(self.target), before)
+
     def test_installed_task_cli_can_create_and_check_v2_without_source_imports(self):
         self.install("--apply")
         script = self.target / "validation/tasks.py"

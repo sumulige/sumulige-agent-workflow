@@ -21,7 +21,8 @@
     {
       "description": "安装后的 CLI 以及定制规则升级回退可用",
       "evidence": [
-        "regression"
+        "regression",
+        "usability"
       ],
       "id": "ac-3",
       "required": true,
@@ -37,8 +38,8 @@
       "status": "VERIFIED"
     }
   ],
-  "authorization": "用户明确批准 contract-proposal.md；本任务治理工具维护与验证，沿用验证后提交分支推送授权",
-  "candidate": "sha256:337e044abad6a3705a90bc43a90a6239579c44c00eec7604363d8a084797f539",
+  "authorization": "用户明确批准 contract-proposal.md；本任务治理工具维护与验证，沿用验证后提交分支推送授权；用户要求修正可用性验证发现的 local 指纹额外写入",
+  "candidate": "sha256:f0c56cfe72e34ea5c961a2c326a9c306fda44ae4668a018ad06434eedfacf253",
   "contract": {
     "basis": "已批准的规则包治理维护；目标项目配置保持 unconfigured，不冒充产品就绪",
     "checks": [
@@ -83,7 +84,7 @@
   "evidence": [
     {
       "artifact": "docs/changes/2026-09-evidence-contract/checks.log",
-      "candidate": "sha256:337e044abad6a3705a90bc43a90a6239579c44c00eec7604363d8a084797f539",
+      "candidate": "sha256:f0c56cfe72e34ea5c961a2c326a9c306fda44ae4668a018ad06434eedfacf253",
       "check_id": "regression",
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
@@ -96,18 +97,18 @@
         "-v"
       ],
       "contract": "08a8b27af9a9f4e34b4f3384d5a57b7f5bc2033eb5ced012a6f769074f9aa21b",
-      "count": 86,
+      "count": 87,
       "cwd": ".",
       "exit_code": 0,
       "id": "regression",
       "layer": "integration",
       "outcome": "exited",
-      "sha256": "76c4c9ed2c7cd97da32d48a7e6c3d7776ded38995b65fe6416756aee213b0f5c",
+      "sha256": "61b890d06172064cc1003fd04eb7fcdfbfa6c5e2aebbb176830732f62e9b741c",
       "status": "VERIFIED"
     },
     {
       "artifact": "docs/changes/2026-09-evidence-contract/bundle.json",
-      "candidate": "sha256:337e044abad6a3705a90bc43a90a6239579c44c00eec7604363d8a084797f539",
+      "candidate": "sha256:f0c56cfe72e34ea5c961a2c326a9c306fda44ae4668a018ad06434eedfacf253",
       "check_id": "bundle",
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
@@ -124,7 +125,26 @@
       "id": "bundle",
       "layer": "static",
       "outcome": "exited",
-      "sha256": "d512d79e4d3b8a34f2bcc48acaaacab5511b5cd665a37cdeebf277726ceabbd4",
+      "sha256": "0d303072ef0bb5e0ff2c5d2a0aac4cc4a57411c3b4885a90a9b9091237ee935a",
+      "status": "VERIFIED"
+    },
+    {
+      "artifact": "docs/changes/2026-09-evidence-contract/usability.json",
+      "candidate": "sha256:f0c56cfe72e34ea5c961a2c326a9c306fda44ae4668a018ad06434eedfacf253",
+      "check_id": "",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/private/tmp/workflow-local-lock-fix-cikg_7f9/verify.py"
+      ],
+      "contract": "08a8b27af9a9f4e34b4f3384d5a57b7f5bc2033eb5ced012a6f769074f9aa21b",
+      "count": null,
+      "cwd": ".",
+      "exit_code": 0,
+      "id": "usability",
+      "layer": "runtime",
+      "outcome": "exited",
+      "sha256": "90158af870033bc34c7e6d7146b0116e211ae94fd28b094ddd45c678c18b8bc9",
       "status": "VERIFIED"
     }
   ],
