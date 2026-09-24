@@ -1,0 +1,21 @@
+{
+  "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "validation/tests",
+    "-p",
+    "test_managed.py",
+    "-k",
+    "reference_documents",
+    "-v"
+  ],
+  "exit_code": 1,
+  "executed": 1,
+  "failed_subcases": 2,
+  "output": "test_reference_documents_are_installed_checked_and_required (test_managed.ManagedTests.test_reference_documents_are_installed_checked_and_required) ... \n  test_reference_documents_are_installed_checked_and_required (test_managed.ManagedTests.test_reference_documents_are_installed_checked_and_required) (document='docs/agent/reference/engineering.md') ... FAIL\n  test_reference_documents_are_installed_checked_and_required (test_managed.ManagedTests.test_reference_documents_are_installed_checked_and_required) (document='docs/agent/reference/resources.md') ... FAIL\n\n======================================================================\nFAIL: test_reference_documents_are_installed_checked_and_required (test_managed.ManagedTests.test_reference_documents_are_installed_checked_and_required) (document='docs/agent/reference/engineering.md')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow/validation/tests/test_managed.py\", line 54, in test_reference_documents_are_installed_checked_and_required\n    self.assertTrue(path.is_file(), \"Installed entry must resolve its reference\")\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : Installed entry must resolve its reference\n\n======================================================================\nFAIL: test_reference_documents_are_installed_checked_and_required (test_managed.ManagedTests.test_reference_documents_are_installed_checked_and_required) (document='docs/agent/reference/resources.md')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow/validation/tests/test_managed.py\", line 54, in test_reference_documents_are_installed_checked_and_required\n    self.assertTrue(path.is_file(), \"Installed entry must resolve its reference\")\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : Installed entry must resolve its reference\n\n----------------------------------------------------------------------\nRan 1 test in 0.122s\n\nFAILED (failures=2)\n"
+}

@@ -1,0 +1,174 @@
+{
+  "base": "717ff71cb1d806b2a960623f02e8d8e9002b10ca",
+  "result": "VERIFIED",
+  "records": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/legacy/validation/manage.py",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project",
+        "--apply"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "output": "CREATE: AGENTS.md\nCREATE: CLAUDE.md\nCREATE: docs/agent/project.json\nCREATE: docs/agent/project.md\nCREATE: docs/agent/workflow.md\nCREATE: docs/agent/testing.md\nCREATE: docs/agent/tooling.md\nCREATE: docs/agent/scenarios.md\nCREATE: docs/agent/clients.md\nCREATE: docs/agent/maintenance.md\nCREATE: docs/specs/_TEMPLATE/requirements.md\nCREATE: docs/specs/_TEMPLATE/design.md\nCREATE: docs/specs/_TEMPLATE/tasks.md\nCREATE: docs/adr/0000-template.md\nCREATE: .agent/memory.example.md\nCREATE: validation/check_bundle.py\nCREATE: GEMINI.md\nCREATE: validation/tasks.py\nCREATE: validation/task_contract.py\nCREATE: validation/storage.py\nCREATE: README.md\nCREATE: CHANGELOG.md\nCREATE: TODO.md\nCREATE: docs/PROJECT-SPEC.md\nCREATE: docs/ARCHITECTURE.md\nCREATE: docs/DEVELOPMENT.md\nCREATE: docs/TESTING.md\nCREATE: .agent/project-rules.md\nCREATE: .agent/workflow-lock.json\nTRANSACTION: c576a67b6dea4bbf8fcb3c15509cbf29\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow/validation/manage.py",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "output": "UPDATE: AGENTS.md\nSAME: CLAUDE.md\nLOCAL: docs/agent/project.json\nSAME: docs/agent/project.md\nUPDATE: docs/agent/workflow.md\nSAME: docs/agent/testing.md\nUPDATE: docs/agent/tooling.md\nSAME: docs/agent/scenarios.md\nSAME: docs/agent/clients.md\nUPDATE: docs/agent/maintenance.md\nCREATE: docs/agent/reference/engineering.md\nCREATE: docs/agent/reference/resources.md\nSAME: docs/specs/_TEMPLATE/requirements.md\nSAME: docs/specs/_TEMPLATE/design.md\nSAME: docs/specs/_TEMPLATE/tasks.md\nSAME: docs/adr/0000-template.md\nSAME: .agent/memory.example.md\nUPDATE: validation/check_bundle.py\nSAME: GEMINI.md\nSAME: validation/tasks.py\nSAME: validation/task_contract.py\nSAME: validation/storage.py\nLOCAL: README.md\nLOCAL: CHANGELOG.md\nLOCAL: TODO.md\nLOCAL: docs/PROJECT-SPEC.md\nLOCAL: docs/ARCHITECTURE.md\nLOCAL: docs/DEVELOPMENT.md\nLOCAL: docs/TESTING.md\nLOCAL: .agent/project-rules.md\nUPDATE: .agent/workflow-lock.json\nPREVIEW ONLY: no writes; review before --apply\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow/validation/manage.py",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project",
+        "--apply"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "output": "UPDATE: AGENTS.md\nSAME: CLAUDE.md\nLOCAL: docs/agent/project.json\nSAME: docs/agent/project.md\nUPDATE: docs/agent/workflow.md\nSAME: docs/agent/testing.md\nUPDATE: docs/agent/tooling.md\nSAME: docs/agent/scenarios.md\nSAME: docs/agent/clients.md\nUPDATE: docs/agent/maintenance.md\nCREATE: docs/agent/reference/engineering.md\nCREATE: docs/agent/reference/resources.md\nSAME: docs/specs/_TEMPLATE/requirements.md\nSAME: docs/specs/_TEMPLATE/design.md\nSAME: docs/specs/_TEMPLATE/tasks.md\nSAME: docs/adr/0000-template.md\nSAME: .agent/memory.example.md\nUPDATE: validation/check_bundle.py\nSAME: GEMINI.md\nSAME: validation/tasks.py\nSAME: validation/task_contract.py\nSAME: validation/storage.py\nLOCAL: README.md\nLOCAL: CHANGELOG.md\nLOCAL: TODO.md\nLOCAL: docs/PROJECT-SPEC.md\nLOCAL: docs/ARCHITECTURE.md\nLOCAL: docs/DEVELOPMENT.md\nLOCAL: docs/TESTING.md\nLOCAL: .agent/project-rules.md\nUPDATE: .agent/workflow-lock.json\nTRANSACTION: 792f22483d4e49c99be74d55bfe24a98\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow/validation/manage.py",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project",
+        "--check"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "output": "VALID: core profile, 2.3.0-dev; structural checks only\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project/validation/check_bundle.py",
+        "--json"
+      ],
+      "cwd": "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project",
+      "exit_code": 0,
+      "output": "{\n  \"mode\": \"bundle\",\n  \"total\": 63,\n  \"fail\": 0,\n  \"scope\": \"static structure/configuration only; no command or agent execution\",\n  \"checked_at\": \"2026-09-24T06:33:16.765397+00:00\",\n  \"input_sha256\": {\n    \"AGENTS.md\": \"2e33f74a3b1ab4f010571851cdb9f3638eed3342a3ba2758b9a6d4e9e476637f\",\n    \"CLAUDE.md\": \"ef5dff1ccb6bc15a0a6d9a0b0ce4a9dc10c8f2a9bf4e780b16749ddedb53363c\",\n    \"docs/agent/project.json\": \"835c4cc53c67b50d727356048bd4d398d7826eedc84a98a92d8111f324ff20b2\",\n    \"docs/agent/project.md\": \"8540eea38d96bb1cfb12b9dff4a756d62a29aad42fd41b13d75c99bcb3ca2f95\",\n    \"docs/agent/workflow.md\": \"92e1be269a812441f8c03da8669a0ad584a8ddee827b309d01d2c8e398459453\",\n    \"docs/agent/testing.md\": \"d5416da81a69669ba8760abb0d7b0de754730fbd34d6f701969cc1acc857ddd5\",\n    \"docs/agent/tooling.md\": \"b2647dcbaaa5b4f3ec6c71a32dc3675d843e3fa5c0015008b8cf169f525b2860\",\n    \"docs/agent/scenarios.md\": \"c100ba3cba7ddaee3b42344844113edf635bdaa38ceb00fd9a234597cc7246a1\",\n    \"docs/agent/clients.md\": \"fb8b8af59defdf0900c8e1448928b0915d5b82ca2113271dbb58756e7ab0ec0b\",\n    \"docs/agent/maintenance.md\": \"abf03078fb299bb1d01b38fe2848463207e47a2d1396f422e5e44751d25f131b\",\n    \"docs/agent/reference/engineering.md\": \"d4e6e4d5b10c8501bccfb435f4c151e9cea7f48f6c8582648288d6cc8137f86f\",\n    \"docs/agent/reference/resources.md\": \"ba6e1a79b4cb352efb119a953401da6a531f7adbc6a2838ffae557461fac39e1\",\n    \"docs/specs/_TEMPLATE/requirements.md\": \"14fdfe45bc53c9ef3807ea896d508895c6dfab070e72c96e16fb73dd98efa562\",\n    \"docs/specs/_TEMPLATE/design.md\": \"21ae26fbe114435a71e92e3fc81479db8a37fbcdf1688a39a42fa3fbe6fb065c\",\n    \"docs/specs/_TEMPLATE/tasks.md\": \"e5c2409687cadb28181af6981a0e5acd4cce08535b19255b4006fef775a8c156\",\n    \"docs/adr/0000-template.md\": \"50bd945aa2b2d4b77824869f9cf51edb651c6cf2901de96084545bd8d18f23ee\",\n    \".agent/memory.example.md\": \"b9c01ad0f9f1b1ebed3deaba6ef071a114998ca33890f74265f7233fe7fc55e1\",\n    \"validation/check_bundle.py\": \"6a861e56c8d22122847e83c629a22f04b0be2545a39ae857e4f2b4574955baf4\"\n  },\n  \"checks\": [\n    {\n      \"check\": \"root.directory\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:AGENTS.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:CLAUDE.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/project.json\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/project.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/workflow.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/testing.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/tooling.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/scenarios.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/clients.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/maintenance.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/reference/engineering.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/agent/reference/resources.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/specs/_TEMPLATE/requirements.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/specs/_TEMPLATE/design.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/specs/_TEMPLATE/tasks.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:docs/adr/0000-template.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:.agent/memory.example.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"file:validation/check_bundle.py\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"project.schema\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"agents.HR-1.body\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"agents.HR-2.body\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"agents.HR-3.body\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"agents.HR-4.body\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"agents.HR-5.body\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"agents.HR-6.body\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"agents.HR-7.body\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"agents.HR-8.body\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"agents.HR-9.body\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:AGENTS.md:docs/agent/project.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:AGENTS.md:docs/agent/project.json\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:AGENTS.md:docs/agent/workflow.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:AGENTS.md:docs/agent/reference/engineering.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:AGENTS.md:docs/agent/testing.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:AGENTS.md:docs/agent/tooling.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:AGENTS.md:docs/agent/reference/resources.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:AGENTS.md:docs/agent/clients.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:AGENTS.md:docs/agent/maintenance.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/project.md:project.json\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/project.md:testing.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/workflow.md:project.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/workflow.md:../specs/_TEMPLATE/requirements.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/workflow.md:../adr/0000-template.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/workflow.md:testing.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/workflow.md:../../.agent/memory.example.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/testing.md:scenarios.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/tooling.md:reference/resources.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/tooling.md:clients.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/scenarios.md:clients.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/maintenance.md:workflow.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/reference/engineering.md:../../../AGENTS.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/reference/engineering.md:../workflow.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/reference/resources.md:../clients.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"link:docs/agent/reference/resources.md:../tooling.md\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"testing.state:GREEN\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"testing.state:RED\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"testing.state:UNTESTED\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"testing.state:TIMEOUT\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"testing.state:UNKNOWN\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"testing.state:COMPLETE\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"testing.state:PARTIAL\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"testing.state:BLOCKED\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"claude.import\",\n      \"result\": \"pass\",\n      \"detail\": \"\"\n    }\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow/validation/manage.py",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project",
+        "--apply"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "output": "SAME: AGENTS.md\nSAME: CLAUDE.md\nLOCAL: docs/agent/project.json\nSAME: docs/agent/project.md\nSAME: docs/agent/workflow.md\nSAME: docs/agent/testing.md\nSAME: docs/agent/tooling.md\nSAME: docs/agent/scenarios.md\nSAME: docs/agent/clients.md\nSAME: docs/agent/maintenance.md\nSAME: docs/agent/reference/engineering.md\nSAME: docs/agent/reference/resources.md\nSAME: docs/specs/_TEMPLATE/requirements.md\nSAME: docs/specs/_TEMPLATE/design.md\nSAME: docs/specs/_TEMPLATE/tasks.md\nSAME: docs/adr/0000-template.md\nSAME: .agent/memory.example.md\nSAME: validation/check_bundle.py\nSAME: GEMINI.md\nSAME: validation/tasks.py\nSAME: validation/task_contract.py\nSAME: validation/storage.py\nLOCAL: README.md\nLOCAL: CHANGELOG.md\nLOCAL: TODO.md\nLOCAL: docs/PROJECT-SPEC.md\nLOCAL: docs/ARCHITECTURE.md\nLOCAL: docs/DEVELOPMENT.md\nLOCAL: docs/TESTING.md\nLOCAL: .agent/project-rules.md\nSAME: .agent/workflow-lock.json\nUNCHANGED\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow/validation/manage.py",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project",
+        "--rollback",
+        "792f22483d4e49c99be74d55bfe24a98"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "output": "RESTORE: .agent/workflow-lock.json\nRESTORE: AGENTS.md\nRESTORE: docs/agent/maintenance.md\nRESTORE: docs/agent/reference/engineering.md\nRESTORE: docs/agent/reference/resources.md\nRESTORE: docs/agent/tooling.md\nRESTORE: docs/agent/workflow.md\nRESTORE: validation/check_bundle.py\nPREVIEW ONLY: no writes; review before --apply\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow/validation/manage.py",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project",
+        "--rollback",
+        "792f22483d4e49c99be74d55bfe24a98",
+        "--apply"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "output": "RESTORE: .agent/workflow-lock.json\nRESTORE: AGENTS.md\nRESTORE: docs/agent/maintenance.md\nRESTORE: docs/agent/reference/engineering.md\nRESTORE: docs/agent/reference/resources.md\nRESTORE: docs/agent/tooling.md\nRESTORE: docs/agent/workflow.md\nRESTORE: validation/check_bundle.py\nTRANSACTION: 06b26d0425ba44d99845e0cb57e26db6\n"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/legacy/validation/manage.py",
+        "/var/folders/tz/q9qycrv51sn13rxrq1zvhh4w0000gn/T/entry-routing-vc8b2rep/project",
+        "--check"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "output": "VALID: core profile, 2.3.0-dev; structural checks only\n"
+    }
+  ],
+  "preserved": [
+    "top_test_principles",
+    "HR-1..9",
+    "user_value_and_ten_principles",
+    "moved_workflow_clauses",
+    "local_project_rules",
+    "rollback_snapshot"
+  ],
+  "root_chars": {
+    "before": 4750,
+    "after": 1903
+  },
+  "transaction": {
+    "files": {
+      ".agent/workflow-lock.json": {
+        "after": "211600f83cc0b38fed8191dbca2110756064565e4c3fcb1639d190889a98400d",
+        "backup": "7",
+        "before": "7984bd26366cd12537e8749046b2a05a747f7bbbb1078512e9899312e6019f8a"
+      },
+      "AGENTS.md": {
+        "after": "2e33f74a3b1ab4f010571851cdb9f3638eed3342a3ba2758b9a6d4e9e476637f",
+        "backup": "0",
+        "before": "2c123d7e57fa9248d85ff03b1efb7a2b0fb6234b5ff1772ee4437bf54d7ebe0a"
+      },
+      "docs/agent/maintenance.md": {
+        "after": "abf03078fb299bb1d01b38fe2848463207e47a2d1396f422e5e44751d25f131b",
+        "backup": "3",
+        "before": "a45d16a92454ce9a786e4f9d7c2f05b26b02c1c154cf53b865d0b635f0df04a7"
+      },
+      "docs/agent/reference/engineering.md": {
+        "after": "d4e6e4d5b10c8501bccfb435f4c151e9cea7f48f6c8582648288d6cc8137f86f",
+        "backup": "4",
+        "before": null
+      },
+      "docs/agent/reference/resources.md": {
+        "after": "ba6e1a79b4cb352efb119a953401da6a531f7adbc6a2838ffae557461fac39e1",
+        "backup": "5",
+        "before": null
+      },
+      "docs/agent/tooling.md": {
+        "after": "b2647dcbaaa5b4f3ec6c71a32dc3675d843e3fa5c0015008b8cf169f525b2860",
+        "backup": "2",
+        "before": "4cb32e87e8000d4b10e0b0c5e656aa66e874d5fa44ce94d549887b4c886a944e"
+      },
+      "docs/agent/workflow.md": {
+        "after": "92e1be269a812441f8c03da8669a0ad584a8ddee827b309d01d2c8e398459453",
+        "backup": "1",
+        "before": "f6a64efa79cd944f5a1db9ec07b7cbed2dc0f32e85371f820327bb2dde867c94"
+      },
+      "validation/check_bundle.py": {
+        "after": "6a861e56c8d22122847e83c629a22f04b0be2545a39ae857e4f2b4574955baf4",
+        "backup": "6",
+        "before": "3aca77934e99ba995ad1fddd2296a98f86325cf96ac0218bbf194c638356974f"
+      }
+    },
+    "schema_version": 1,
+    "state": "applied"
+  },
+  "boundary": "Synthetic CLI lifecycle and text preservation; native agent behavior UNKNOWN."
+}

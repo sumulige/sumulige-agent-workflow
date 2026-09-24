@@ -20,6 +20,7 @@ CORE_FILES = (
     "docs/agent/testing.md", "docs/agent/tooling.md",
     "docs/agent/scenarios.md", "docs/agent/clients.md",
     "docs/agent/maintenance.md",
+    "docs/agent/reference/engineering.md", "docs/agent/reference/resources.md",
     "docs/specs/_TEMPLATE/requirements.md",
     "docs/specs/_TEMPLATE/design.md", "docs/specs/_TEMPLATE/tasks.md",
     "docs/adr/0000-template.md", ".agent/memory.example.md",

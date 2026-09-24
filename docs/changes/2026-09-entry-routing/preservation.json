@@ -1,0 +1,21 @@
+{
+  "base": "717ff71cb1d806b2a960623f02e8d8e9002b10ca",
+  "original_root_chars": 4750,
+  "original_root_lines": 118,
+  "new_root_chars": 1903,
+  "new_root_lines": 40,
+  "preserved": {
+    "top_tests": "3551ddab19e02395419d9a478e5a533b28e20f8b66512c8f3c0e01bac3e5a600",
+    "hard_rules": "4686232129b779bfc0611c5b07b2a81e412cc264f30448e7a3038ba5d46de6e0",
+    "engineering_body": "4720f7b710e8d9e2819b39c8e21a3ac99c65a9b9471109787b369f9d8ca7b21a",
+    "report": "3efd622f4d77d6a78ca0aae2ae29924bc028d0c55dfbf19e01eff0a77848ffb3"
+  },
+  "moved_clauses": [
+    "architecture",
+    "memory",
+    "publication",
+    "conflicts",
+    "report"
+  ],
+  "engineering_applicability_note": "Only the introductory context links changed; the user-value principle and all ten numbered principles are byte-identical, checked by verify.py."
+}

@@ -40,6 +40,28 @@ class ManagedTests(unittest.TestCase):
         self.assertIn("UNCHANGED", result.stdout)
         self.assertEqual(snapshot(self.target), before)
 
+    def test_reference_documents_are_installed_checked_and_required(self):
+        self.install("--apply")
+        result = subprocess.run(
+            [sys.executable, "-B", str(self.target / "validation/check_bundle.py"), "--json"],
+            cwd=self.target, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        report = json.loads(result.stdout)
+        for name in ("engineering.md", "resources.md"):
+            relative = "docs/agent/reference/" + name
+            with self.subTest(document=relative):
+                path = self.target / relative
+                self.assertTrue(path.is_file(), "Installed entry must resolve its reference")
+                self.assertEqual(path.read_bytes(), (self.source / relative).read_bytes())
+                self.assertIn(relative, report["input_sha256"])
+                original = path.read_bytes()
+                path.unlink()
+                before = snapshot(self.target)
+                self.assertEqual(self.cli(self.target, "--check").returncode, 1)
+                self.assertEqual(self.cli(self.target, "--apply").returncode, 1)
+                self.assertEqual(snapshot(self.target), before)
+                path.write_bytes(original)
+
     def test_local_edits_do_not_refresh_lock_or_create_backups(self):
         self.install("--apply")
         for relative in ("README.md", "TODO.md", "docs/PROJECT-SPEC.md", ".agent/project-rules.md"):
