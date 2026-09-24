@@ -1,0 +1,80 @@
+{
+  "base_head": "f11e39a0d2b0539cc64a3d2004784d739ffab543",
+  "scope": [
+    "docs/specs/_TEMPLATE/requirements.md",
+    "docs/agent/workflow.md",
+    "CHANGELOG.md"
+  ],
+  "candidate_diff_sha256": "28ce1031fc39552d676815e262a8bdfa6f3c3ead5530e5c490988633d7720555",
+  "scope_note": "Diff includes the earlier uncommitted user-value changes; this refinement changes four existing rows and one workflow guard.",
+  "static_review": {
+    "value_rows": [
+      "用户与场景",
+      "当前做法",
+      "目标结果",
+      "证据与假设",
+      "最小解决方式",
+      "成本与取舍",
+      "验证与退出"
+    ],
+    "core_principles_count": 10,
+    "status": "VERIFIED",
+    "reviewer": "implementing Codex session; not independent review"
+  },
+  "test_status": "N/A: prose-only refinement; no code or test changes; prior 87-test result was not rerun.",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "validation/check_bundle.py",
+        "--mode",
+        "bundle"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "test_count": null,
+      "output": "[PASS] root.directory \n[PASS] file:AGENTS.md \n[PASS] file:CLAUDE.md \n[PASS] file:docs/agent/project.json \n[PASS] file:docs/agent/project.md \n[PASS] file:docs/agent/workflow.md \n[PASS] file:docs/agent/testing.md \n[PASS] file:docs/agent/tooling.md \n[PASS] file:docs/agent/scenarios.md \n[PASS] file:docs/agent/clients.md \n[PASS] file:docs/agent/maintenance.md \n[PASS] file:docs/specs/_TEMPLATE/requirements.md \n[PASS] file:docs/specs/_TEMPLATE/design.md \n[PASS] file:docs/specs/_TEMPLATE/tasks.md \n[PASS] file:docs/adr/0000-template.md \n[PASS] file:.agent/memory.example.md \n[PASS] file:validation/check_bundle.py \n[PASS] project.schema \n[PASS] agents.HR-1.body \n[PASS] agents.HR-2.body \n[PASS] agents.HR-3.body \n[PASS] agents.HR-4.body \n[PASS] agents.HR-5.body \n[PASS] agents.HR-6.body \n[PASS] agents.HR-7.body \n[PASS] agents.HR-8.body \n[PASS] agents.HR-9.body \n[PASS] link:AGENTS.md:docs/agent/project.md \n[PASS] link:AGENTS.md:docs/agent/project.json \n[PASS] link:AGENTS.md:docs/agent/workflow.md \n[PASS] link:AGENTS.md:docs/agent/testing.md \n[PASS] link:AGENTS.md:docs/agent/tooling.md \n[PASS] link:AGENTS.md:docs/agent/workflow.md \n[PASS] link:AGENTS.md:docs/agent/testing.md \n[PASS] link:AGENTS.md:docs/agent/tooling.md \n[PASS] link:AGENTS.md:docs/agent/clients.md \n[PASS] link:AGENTS.md:docs/adr/0000-template.md \n[PASS] link:AGENTS.md:.agent/memory.example.md \n[PASS] link:AGENTS.md:docs/agent/maintenance.md \n[PASS] link:docs/agent/project.md:project.json \n[PASS] link:docs/agent/project.md:testing.md \n[PASS] link:docs/agent/workflow.md:project.md \n[PASS] link:docs/agent/workflow.md:../specs/_TEMPLATE/requirements.md \n[PASS] link:docs/agent/workflow.md:testing.md \n[PASS] link:docs/agent/testing.md:scenarios.md \n[PASS] link:docs/agent/tooling.md:clients.md \n[PASS] link:docs/agent/scenarios.md:clients.md \n[PASS] link:docs/agent/maintenance.md:workflow.md \n[PASS] testing.state:GREEN \n[PASS] testing.state:RED \n[PASS] testing.state:UNTESTED \n[PASS] testing.state:TIMEOUT \n[PASS] testing.state:UNKNOWN \n[PASS] testing.state:COMPLETE \n[PASS] testing.state:PARTIAL \n[PASS] testing.state:BLOCKED \n[PASS] claude.import \n57 checks; 0 fail; mode=bundle\nstatic structure/configuration only; no command or agent execution\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "validation/tasks.py",
+        "check",
+        "--root",
+        "."
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "test_count": null,
+      "output": "VALID: 2 task records; 1 legacy v1 (structural checks only); no identity/semantic certification\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "validation/tasks.py",
+        "todo",
+        "--root",
+        ".",
+        "--check"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "test_count": null,
+      "output": "# 当前任务\n\n任务与证据见 docs/changes/。\n\n<!-- workflow:tasks:start -->\n| 任务 | 状态 | 测试 | 发布 | 下一步 |\n|---|---|---|---|---|\n| [2026-09-coding-workflow](docs/changes/2026-09-coding-workflow/task.json) 跨客户端编码工作流 v2.3 候选 | PARTIAL | GREEN | UNRELEASED | 独立审查及七客户端原生场景；新候选 CI 与发布分别验收 |\n| [2026-09-evidence-contract](docs/changes/2026-09-evidence-contract/task.json) 任务 v2 检查契约与定制升级修复 | PARTIAL | GREEN | UNRELEASED | 独立审查当前候选；核对分支 CI；随后开展经授权的两客户端真实接力试点 |\n<!-- workflow:tasks:end -->\n"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/Users/sumulige/Documents/Antigravity/sumulige-coding-agent-workflow",
+      "exit_code": 0,
+      "test_count": null,
+      "output": ""
+    }
+  ]
+}
